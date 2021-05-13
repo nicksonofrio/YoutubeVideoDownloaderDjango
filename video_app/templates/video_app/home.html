@@ -1,0 +1,17 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <title>Youtube Video Downloader</title>
+    </head>
+    <body>
+
+        <form action=".">{% csrf_token %}
+            <label>Place youtube link in the input box below</label>
+            <input type="text" id="youtubeLink" name="youtubeLink" >
+            {{ 'Random message' }}
+            <button name="download_button" id="download_button" onclick="{% url 'downloader' %}">Download Video</button>
+        </form>
+
+    </body>
+</html>
