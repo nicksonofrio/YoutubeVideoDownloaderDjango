@@ -16,9 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from video_app import views
+from video_app.views import form_view
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('video_app/', include('video_app.urls')),
-    path('video_app/',views.home_view)
+    #path('video_app/', include('video_app.urls')),
+    #path('video_app/',views.home_view),
+    path('formview/', form_view),
+    path('', views.apiOverview, name="api-overview"),
+    #path('api/', include('api.urls')),
+    path('', TemplateView.as_view(template_name='index.html')),
+    path('api-auth/', include('rest_framework.urls')),
+    path('videos-list/', views.videoList),
 ]

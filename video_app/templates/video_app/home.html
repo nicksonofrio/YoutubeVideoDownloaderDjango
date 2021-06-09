@@ -6,11 +6,14 @@
     </head>
     <body>
 
-        <form action=".">{% csrf_token %}
+        <form action="." method='POST'>{% csrf_token %}
+            {{ form.as_p }}
             <label>Place youtube link in the input box below</label>
             <input type="text" id="youtubeLink" name="youtubeLink" >
             {{ 'Random message' }}
-            <button name="download_button" id="download_button" onclick="{% url 'downloader' %}">Download Video</button>
+            <input type='submit' value='Download'/>
+            {{ form.as_p }}
+            <!--<button name="download_button" id="download_button" onclick="{% url 'downloader' %}">Download Video</button>-->
         </form>
 
     </body>

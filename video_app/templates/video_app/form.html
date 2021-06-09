@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Youtube Video Downloader</title>
+    </head>
+    <body>
+        <h1 style="text-align:center">Youtube Video Downloader</h1>
+        <form action="." method='POST'> {% csrf_token %}
+            
+            {% for field in form %}
+            <div>
+                {{ field.label_tag }}
+                {{ field }}
+                <br> </br>
+            </div>
+            {% endfor %}
+            <input type='submit' value='download'/>   
+        </form>
+        
+    </body>
+</html>

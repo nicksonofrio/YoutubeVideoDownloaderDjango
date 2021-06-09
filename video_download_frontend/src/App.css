@@ -7,14 +7,36 @@
   pointer-events: none;
 }
 
+body{
+  background: rgb(0,0,0);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+#download-form{
+  max-width:550px;
+  margin: 0 auto;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:10px;
+  padding-right:10px;
+
+  background:linear-gradient(rgba(52,52,52,0.5), transparent);
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+
+}
+#background {
+  background-color: white;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,10 +46,8 @@
   color: white;
 }
 
-
-
 .App-link {
-  color: #61dafb;
+  color: white;
 }
 
 @keyframes App-logo-spin {
